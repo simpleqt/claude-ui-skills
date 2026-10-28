@@ -1,0 +1,96 @@
+/*
+  Sourced from open-claude-ui (https://github.com/Caho1/open-claude-ui)
+  © Caho1, MIT License. Distilled into cds skills with attribution.
+*/
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: 'class',
+  content: [
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+    './code-examples/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        clay: {
+          DEFAULT: '#d97757',
+          hover: '#cc5a36',
+          light: '#fbf3ef',
+          dark: '#e08264',
+        },
+        surface: {
+          0: 'var(--cds-surface-0)',
+          1: 'var(--cds-surface-1)',
+          2: 'var(--cds-surface-2)',
+          3: 'var(--cds-surface-3)',
+          popover: 'var(--cds-surface-popover)',
+        },
+      },
+      fontFamily: {
+        sans: [
+          'AnthropicSans',
+          'Inter',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'PingFang SC',
+          'sans-serif',
+        ],
+        serif: [
+          'AnthropicSerif',
+          'Newsreader',
+          'ui-serif',
+          'Georgia',
+          'Times New Roman',
+          'serif',
+        ],
+        mono: [
+          'JetBrains Mono',
+          'ui-monospace',
+          'SF Mono',
+          'Menlo',
+          'monospace',
+        ],
+      },
+      borderRadius: {
+        'xs': 'var(--radius-xs, 2px)',
+        'sm': 'var(--radius-sm, 4px)',
+        'md': 'var(--radius-md, 6px)',
+        'lg': 'var(--radius-lg, 8px)',
+        'panel': 'var(--cds-panel-radius, 10px)',
+        'xl': 'var(--radius-xl, 12px)',
+        '2xl': 'var(--radius-2xl, 16px)',
+        'bubble': 'var(--cds-message-bubble-radius, 18px)',
+        'composer': 'var(--cds-radius-composer, 20px)',
+        'pill': 'var(--df-radius-pill, 999px)',
+        'card': 'var(--radius-card, calc(var(--radius-lg, 8px) + calc(4px * var(--cds-rem-scale, 1))))',
+      },
+      boxShadow: {
+        'sm': 'var(--cds-shadow-sm)',
+        'md': 'var(--cds-shadow-md)',
+        'lg': 'var(--cds-shadow-lg)',
+        'popover': 'var(--cds-shadow-popover)',
+        'composer': 'var(--cds-shadow-composer)',
+        'composer-hover': 'var(--cds-shadow-composer-hover)',
+        'composer-focus': 'var(--cds-shadow-composer-focus)',
+        'focus-glow': 'var(--cds-focus-shadow)',
+        'drop-glow': 'var(--cds-shadow-drop-glow)',
+        'panel': 'var(--cds-panel-shadow)',
+        'panel-hover': 'var(--cds-panel-shadow-hover)',
+      },
+      animation: {
+        'quiet-dot': 'timeline-quiet-dot 1.9s cubic-bezier(0.4, 0, 0.2, 1) infinite',
+        'message-fade-up': 'message-fade-up 0.45s cubic-bezier(0.34, 1.3, 0.64, 1)',
+        'saved-decay': 'saved-check-decay 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) 2.2s forwards',
+        'clay-breathe': 'dframe-clay-breathe 2.4s infinite ease-in-out',
+        'dot-pulse': 'dframe-dot-pulse 1.2s infinite ease-in-out',
+        'shimmer-sweep': 'cds-skeleton-sweep 1.8s infinite cubic-bezier(0.4, 0, 0.2, 1)',
+        'thumbnail-grow': 'file-thumbnail-grow-in 250ms cubic-bezier(0.165, 0.84, 0.44, 1)',
+      },
+    },
+  },
+  plugins: [],
+};
